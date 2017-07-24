@@ -1,0 +1,41 @@
+body {
+	background-color: #e8e8e8;
+}		
+.divA {
+	height:80vh;
+	margin-bottom:10px;
+}
+.divB {
+	margin-bottom:10px;
+}
+.divC {
+	float:left;
+	margin-right:10px;
+}
+.divD {
+	float: right;
+}
+.button {
+	cursor: pointer;
+	border: none;
+	color: white;
+	font-size: 36px;
+	font-weight: bold;
+	width: 160px;
+	height: 80px;
+}
+.button1 {
+	background-color: #43d82f;
+}
+.button2 {
+	background-color: #43d82f;  
+}
+.button3 {
+	background-color: #db3f3f;   
+}
+.button4 {
+	background-color: #f7d700;   
+}
+.button5 {
+	background-color: #e4bdfc;   
+}

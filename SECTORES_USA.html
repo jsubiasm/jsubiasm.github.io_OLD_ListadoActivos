@@ -4,47 +4,9 @@
 
 	<head>
 	
-		<style type="text/css">
-			body {
-				background-color: #e8e8e8;
-			}		
-			.divA {
-				height:80vh;
-				margin-bottom:10px;
-			}
-			.divB {
-				margin-bottom:10px;
-			}
-			.divC {
-				float:left;
-				margin-right:10px;
-			}
-			.divD {
-				float: right;
-			}
-			.button {
-				cursor: pointer;
-				border: none;
-				color: white;
-				font-size: 36px;
-				font-weight: bold;
-				width: 160px;
-				height: 80px;
-			}
-			.button1 {
-				background-color: #43d82f;
-			}
-			.button2 {
-				background-color: #43d82f;  
-			}
-			.button3 {
-				background-color: #db3f3f;   
-			}
-			.button4 {
-				background-color: #f7d700;   
-			}
-		</style>
-		
+		<link rel="stylesheet" type="text/css" href="./estilos.css">
+		<script src="./funciones.js"></script>
+
 	</head>
 
 	<body>
@@ -83,58 +45,6 @@
 				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=45384',
 				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=45385',
 			];
-			
-			function changeIFrame() 
-			{
-				document.getElementById("mySpan").innerHTML = '[' + urlsIdx + '][' + urls[urlsIdx] + ']';
-				document.getElementById('myIframe').src = urls[urlsIdx];			
-			}
-			
-			function anteriorClick() 
-			{
-				urlsIdx = urlsIdx - 1;
-				if(urlsIdx < 0) 
-				{
-					urlsIdx = 0;
-				}
-				if(urlsIdx == 0) 
-				{
-					document.getElementById('btnAnterior').disabled = true;
-				}
-				document.getElementById('btnSiguiente').disabled = false;
-				changeIFrame();
-			}
-			
-			function siguienteClick() 
-			{
-				urlsIdx = urlsIdx + 1;
-				if(urlsIdx > (urls.length - 1)) 
-				{
-					urlsIdx = (urls.length - 1);
-				}
-				if(urlsIdx == (urls.length - 1)) 
-				{
-					document.getElementById('btnSiguiente').disabled = true;
-				}
-				document.getElementById('btnAnterior').disabled = false;
-				changeIFrame();
-			}
-			
-			function eliminarClick() 
-			{
-				urls[urlsIdx] = '';
-				changeIFrame();
-			}			
-			
-			function imprimirClick() 
-			{
-				var html = '';
-				for(var i=0; i<urls.length; i++) 
-				{
-					html = html + "'" + urls[i] + "',<br/>";
-				}
-				document.getElementById("mySpan").innerHTML = html;
-			}				
 			
 			var urlsIdx = 1;
 			anteriorClick();			
