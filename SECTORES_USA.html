@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+	
+		<style type="text/css">
+			body {
+				background-color: #e8e8e8;
+			}		
+			.divA {
+				height:80vh;
+				margin-bottom:10px;
+			}
+			.divB {
+				margin-bottom:10px;
+			}
+			.divC {
+				float:left;
+				margin-right:10px;
+			}
+			.divD {
+				float: right;
+			}
+			.button {
+				cursor: pointer;
+				border: none;
+				color: white;
+				font-size: 36px;
+				font-weight: bold;
+				width: 160px;
+				height: 80px;
+			}
+			.button1 {
+				background-color: #43d82f;
+			}
+			.button2 {
+				background-color: #43d82f;  
+			}
+			.button3 {
+				background-color: #db3f3f;   
+			}
+			.button4 {
+				background-color: #f7d700;   
+			}
+		</style>
+		
+	</head>
+
+	<body>
+
+		<div align="left" class="divA">
+			<iframe id="myIframe" src="" height="100%" width="100%">
+				<p>Your browser does not support iframes.</p>
+			</iframe>
+		</div>
+
+		<div align="left" class="divB">
+			<span id="mySpan"></span>
+		</div>
+
+		<div align="left" class="divC">
+			<input id="btnAnterior" type="button" value="Ant" class="button button1" onClick="javascript:anteriorClick()" />
+			<input id="btnSiguiente" type="button" value="Sig" class="button button2" onClick="javascript:siguienteClick()" />
+		</div>
+
+		<div align="left" class="divD">
+			<input id="btnEliminar" type="button" value="Del" class="button button3" onClick="javascript:eliminarClick()" />
+			<input id="btnImprimir" type="button" value="Imp" class="button button4" onClick="javascript:imprimirClick()" />
+		</div> 	
+
+		<script languaje="javascript">
+		
+			var urls = [	
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=40656',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=40690',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=40657',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=40668',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=959292',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=40691',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=40670',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=14226',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=45384',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=45385',
+			];
+			
+			function changeIFrame() 
+			{
+				document.getElementById("mySpan").innerHTML = '[' + urlsIdx + '][' + urls[urlsIdx] + ']';
+				document.getElementById('myIframe').src = urls[urlsIdx];			
+			}
+			
+			function anteriorClick() 
+			{
+				urlsIdx = urlsIdx - 1;
+				if(urlsIdx < 0) 
+				{
+					urlsIdx = 0;
+				}
+				if(urlsIdx == 0) 
+				{
+					document.getElementById('btnAnterior').disabled = true;
+				}
+				document.getElementById('btnSiguiente').disabled = false;
+				changeIFrame();
+			}
+			
+			function siguienteClick() 
+			{
+				urlsIdx = urlsIdx + 1;
+				if(urlsIdx > (urls.length - 1)) 
+				{
+					urlsIdx = (urls.length - 1);
+				}
+				if(urlsIdx == (urls.length - 1)) 
+				{
+					document.getElementById('btnSiguiente').disabled = true;
+				}
+				document.getElementById('btnAnterior').disabled = false;
+				changeIFrame();
+			}
+			
+			function eliminarClick() 
+			{
+				urls[urlsIdx] = '';
+				changeIFrame();
+			}			
+			
+			function imprimirClick() 
+			{
+				var html = '';
+				for(var i=0; i<urls.length; i++) 
+				{
+					html = html + "'" + urls[i] + "',<br/>";
+				}
+				document.getElementById("mySpan").innerHTML = html;
+			}				
+			
+			var urlsIdx = 1;
+			anteriorClick();			
+			
+		</script>	
+		
+	</body>
+	
+</html>
