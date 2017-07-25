@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+	
+		<link rel="stylesheet" type="text/css" href="./estilos.css">
+		<script src="./funciones.js"></script>
+
+	</head>
+
+	<body>
+
+		<div align="left" class="divA">
+			<iframe id="myIframe" src="" height="100%" width="100%">
+				<p>Your browser does not support iframes.</p>
+			</iframe>
+		</div>
+
+		<div align="left" class="divB">
+			<span id="mySpan"></span>
+		</div>
+
+		<div align="left" class="divC">
+			<input id="btnAnterior" type="button" value="Ant" class="button button1" onClick="javascript:anteriorClick()" />
+			<input id="btnSiguiente" type="button" value="Sig" class="button button2" onClick="javascript:siguienteClick()" />
+		</div>
+
+		<div align="left" class="divD">
+			<input type="button" value="Ini" class="button button6" onClick="window.location.href='./index.html'" />
+			<input id="btnEliminar" type="button" value="Del" class="button button3" onClick="javascript:eliminarClick()" />
+			<input id="btnImprimir" type="button" value="Imp" class="button button4" onClick="javascript:imprimirClick()" />
+		</div> 	
+
+		<script languaje="javascript">
+		
+			var urls = [
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=166',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=169',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=14958',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=44336',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=24441',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=17920',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=13376',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=14767',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=27254',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=174',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=175',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=172',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=27',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=167',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=168',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=177',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=176',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=14600',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=961613',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=14601',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=1016254',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=25685',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=13666',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=13665',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=14602',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=38014',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=19155',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=171',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=178',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=40820',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=942630',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=179',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=38017',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=37426',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=17940',
+				'https://tvc4.forexpros.com/init.php?interval=86400&pair_ID=39929',
+			];
+
+			var urlsIdx = 1;
+			anteriorClick();			
+			
+		</script>	
+		
+	</body>
+	
+</html>
