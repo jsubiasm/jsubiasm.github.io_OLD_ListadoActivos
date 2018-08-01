@@ -28,7 +28,7 @@ public class SortIDS
 	{
 		Map<Long, String> map = new HashMap<Long, String>();
 
-		BufferedReader reader = new BufferedReader(new FileReader("C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\jsubiasm.github.io\\anterior_a_github\\testR.txt"));
+		BufferedReader reader = new BufferedReader(new FileReader("C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\jsubiasm.github.io_OLD_ListadoActivos\\anterior_a_github\\testR.txt"));
 
 		String line = null;
 		while ((line = reader.readLine()) != null)
@@ -48,7 +48,7 @@ public class SortIDS
 		lista.addAll(map.keySet());
 		Collections.sort(lista);
 
-		BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\jsubiasm.github.io\\anterior_a_github\\testW.txt"));
+		BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\jsubiasm.github.io_OLD_ListadoActivos\\anterior_a_github\\testW.txt"));
 		for (Iterator<Long> iterator = lista.iterator(); iterator.hasNext();)
 		{
 			Long id = (Long) iterator.next();
